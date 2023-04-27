@@ -90,6 +90,8 @@ spec:
             stableSubsetName: version-stable
           virtualService:
             name: routetable-podinfo-rt-443-podinfo-mgmt-ops-team.istio-gateways
+            routes:
+            - podinfo-podinfo-rt-443.podinfo.mgmt
   template:
     metadata:
       labels:
