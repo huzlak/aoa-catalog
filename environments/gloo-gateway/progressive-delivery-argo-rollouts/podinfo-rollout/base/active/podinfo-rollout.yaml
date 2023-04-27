@@ -65,9 +65,9 @@ spec:
       # uncomment below to add steps
       steps:
       - setWeight: 10
-      - pause: {duration: 60}
+      - pause: {duration: 20}
       - setWeight: 80
-      - pause: {duration: 60}
+      - pause: {duration: 20}
       ###########################
       # uncomment below to use AnalysisTemplate
       analysis:
@@ -100,7 +100,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: ghcr.io/stefanprodan/podinfo:6.0.1
+        image: ghcr.io/stefanprodan/podinfo:6.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
