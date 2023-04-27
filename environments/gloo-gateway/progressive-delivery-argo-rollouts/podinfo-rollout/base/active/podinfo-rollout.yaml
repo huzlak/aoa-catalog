@@ -30,7 +30,7 @@ spec:
   - name: service
   - name: namespace
   metrics:
-  - initialDelay: 30s
+  - initialDelay: 20s
     interval: 20s
     name: success-rate
     provider:
@@ -40,12 +40,12 @@ spec:
           sum(irate(istio_requests_total{
             reporter="source",
             destination_service=~"{{args.service}}.{{args.namespace}}.svc.cluster.local",
-            response_code!~"5.*"}[40s])
+            response_code!~"5.*"}[20s])
           )
           /
           sum(irate(istio_requests_total{
             reporter="source",
-            destination_service=~"{{args.service}}.{{args.namespace}}.svc.cluster.local"}[40s])
+            destination_service=~"{{args.service}}.{{args.namespace}}.svc.cluster.local"}[20s])
           )
     successCondition: result[0] > 0.95
 ---
@@ -65,9 +65,9 @@ spec:
       # uncomment below to add steps
       steps:
       - setWeight: 10
-      - pause: {duration: 20}
+      - pause: {duration: 40}
       - setWeight: 80
-      - pause: {duration: 20}
+      - pause: {duration: 40}
       ###########################
       # uncomment below to use AnalysisTemplate
       analysis:
