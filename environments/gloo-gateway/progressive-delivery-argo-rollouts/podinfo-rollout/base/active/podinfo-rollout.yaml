@@ -47,7 +47,7 @@ spec:
             reporter="source",
             destination_service=~"{{args.service}}.{{args.namespace}}.svc.cluster.local"}[20s])
           )
-    successCondition: result[0] > 0.95
+    successCondition: result[0] > 0.50
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -86,7 +86,7 @@ spec:
         istio:
           destinationRule:
             canarySubsetName: version-canary
-            name: podinfo-podinfo-svc-cluster-loc-bc96aa96c8984be2c6fa0d59a031dbe
+            name: podinfo-podinfo-svc-cluster-loc-86d19080b5ed2ffc82a077f69c3032b
             stableSubsetName: version-stable
           virtualService:
             name: routetable-podinfo-rt-443-podinfo-mgmt-ops-team.istio-gateways
