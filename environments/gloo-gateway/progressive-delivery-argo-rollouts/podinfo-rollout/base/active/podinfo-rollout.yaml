@@ -86,7 +86,7 @@ spec:
         istio:
           destinationRule:
             canarySubsetName: version-canary
-            name: podinfo-podinfo-svc-cluster-loc-86d19080b5ed2ffc82a077f69c3032b
+            name: podinfo-podinfo-svc-cluster-loc-bc96aa96c8984be2c6fa0d59a031dbe
             stableSubsetName: version-stable
           virtualService:
             name: routetable-podinfo-rt-443-podinfo-mgmt-ops-team.istio-gateways
