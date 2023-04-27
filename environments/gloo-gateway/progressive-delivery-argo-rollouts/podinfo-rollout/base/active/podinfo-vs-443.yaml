@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: routetable-podinfo-rt-443-podinfo-mgmt-ops-team
+  namespace: istio-gateways
+spec:
+  exportTo:
+  - .
+  gateways:
+  - virtualgateway-mgmt-north-south-160cf24a91c46bba751bd1184099b6e
+  hosts:
+  - podinfo-local.glootest.com
+  http:
+  - match:
+    - sourceLabels:
+        app: istio-ingressgateway-1-16
+        istio: ingressgateway
+      uri:
+        prefix: /
+    name: podinfo-podinfo-rt-443.podinfo.mgmt
+    route:
+    - destination:
+        host: podinfo.podinfo.svc.cluster.local
+        port:
+          number: 9898
+        subset: version-stable
+      weight: 100
+    - destination:
+        host: podinfo.podinfo.svc.cluster.local
+        port:
+          number: 9898
+        subset: version-canary
