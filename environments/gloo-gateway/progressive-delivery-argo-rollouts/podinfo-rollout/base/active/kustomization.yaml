@@ -5,6 +5,7 @@ resources:
 - podinfo-ns.yaml
 - podinfo-rollout.yaml
 #- podinfo-rt-443.yaml
+- podinfo-vs-443.yaml
 - podinfo-workspace.yaml
 - podinfo-workspacesettings.yaml
 
