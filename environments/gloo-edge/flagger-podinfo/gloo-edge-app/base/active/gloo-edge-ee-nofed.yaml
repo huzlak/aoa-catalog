@@ -33,7 +33,7 @@ spec:
                 stats:
                   enabled: true
     repoURL: http://storage.googleapis.com/gloo-ee-test-helm
-    targetRevision: /1.16.0-beta2-bfix-readiness-probe-45568b4
+    targetRevision: 1.16.0-beta2-bfix-readiness-probe-45568b4
     #repoURL: http://storage.googleapis.com/gloo-ee-helm
     #targetRevision: 1.15.5
   syncPolicy:
