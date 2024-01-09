@@ -4,7 +4,7 @@ kind: Kustomization
 
 # list of resources to be Applied
 resources:
-- argo-vs.yaml
+  #- argo-vs.yaml
 - okta-client-secret.yaml
 - ratelimitconfig.yaml
 - upstream-tls.yaml
