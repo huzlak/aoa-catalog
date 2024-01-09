@@ -20,7 +20,7 @@ spec:
         #    upstream:
         #      name: test-podinfo-9898
         #      namespace: gloo-system
-        delegateAction:
+        forwardAction:
           ref:
-            name: podinfo
-            namespace: test
+            name: test-podinfo-9898
+            namespace: gloo-system
