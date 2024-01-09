@@ -32,7 +32,7 @@ spec:
                   httpGet:
                     scheme: HTTPS
                     port: 8443
-                    path: /envoy-hc
+                    path: /productpage
                   failureThreshold: 2
                   initialDelaySeconds: 5
                   periodSeconds: 5
