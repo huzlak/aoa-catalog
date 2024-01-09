@@ -15,12 +15,8 @@ spec:
       - matchers:
          - prefix: /
         # manual test
-        #routeAction:
-        #  single:
-        #    upstream:
-        #      name: test-podinfo-9898
-        #      namespace: gloo-system
-        forwardAction:
-          ref:
-            name: test-podinfo-9898
-            namespace: gloo-system
+        routeAction:
+          single:
+            upstream:
+              name: test-podinfo-9898
+              namespace: gloo-system
