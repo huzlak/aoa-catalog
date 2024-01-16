@@ -49,9 +49,6 @@ spec:
                   #  name: null
                   #  namespace: null
             serviceType: LoadBalancer
-            extraEnvs:
-              EXPERIMENTAL_SECRET_FIELD_SELECTOR:
-                value: "metadata.namespace==gloo-mesh"              
         glooUi:
             auth:
                 backend: oidc
