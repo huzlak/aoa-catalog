@@ -37,10 +37,10 @@ spec:
                   #  namespace: null
         glooMgmtServer:
             enabled: true
-              #relay:
-                  #disableCa: true
-                  #disableCaCertGeneration: true
-                  #disableTokenGeneration: true
+              relay:
+                #disableCa: true
+                disableCaCertGeneration: true
+                disableTokenGeneration: true
                   #tlsSecret:
                   #    name: gloo-server-tls-cert
                   ## required to set to null in 2.4.x if providing server and client tls certificates
