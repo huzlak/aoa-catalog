@@ -37,7 +37,7 @@ spec:
                   #  namespace: null
         glooMgmtServer:
             enabled: true
-            relay:
+            #relay:
               #disableCa: true
               #disableCaCertGeneration: true
               #disableTokenGeneration: true
