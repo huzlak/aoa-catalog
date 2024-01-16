@@ -39,8 +39,8 @@ spec:
             enabled: true
             relay:
               #disableCa: true
-                disableCaCertGeneration: true
-                disableTokenGeneration: true
+              #disableCaCertGeneration: true
+              #disableTokenGeneration: true
                   #tlsSecret:
                   #    name: gloo-server-tls-cert
                   ## required to set to null in 2.4.x if providing server and client tls certificates
@@ -207,7 +207,7 @@ spec:
                                     - __meta_kubernetes_pod_phase
 
     repoURL: https://storage.googleapis.com/gloo-platform/helm-charts
-    targetRevision: 2.4.6
+    targetRevision: 2.4.7
   syncPolicy:
     automated:
       prune: true
