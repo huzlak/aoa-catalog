@@ -24,22 +24,22 @@ spec:
             enabled: true
             relay:
                 serverAddress: gloo-mesh-mgmt-server:9900
-                clientTlsSecret:
-                    name: gloo-agent-tls-cert
-                    namespace: gloo-mesh
-                rootTlsSecret:
-                    name: relay-root-ca
-                    namespace: gloo-mesh
+                  #clientTlsSecret:
+                  #    name: gloo-agent-tls-cert
+                  #    namespace: gloo-mesh
+                  #rootTlsSecret:
+                  #    name: relay-root-ca
+                  #    namespace: gloo-mesh
         glooMgmtServer:
             enabled: true
             ports:
                 healthcheck: 8091
-            relay:
-                disableCa: true
-                disableCaCertGeneration: true
-                disableTokenGeneration: true
-                tlsSecret:
-                    name: gloo-server-tls-cert
+            #relay:
+            #  disableCa: true
+            #  disableCaCertGeneration: true
+            #  disableTokenGeneration: true
+            #  tlsSecret:
+            #      name: gloo-server-tls-cert
             serviceType: LoadBalancer
         glooUi:
             auth:
@@ -192,12 +192,12 @@ spec:
                                     - __meta_kubernetes_pod_phase
 
     repoURL: https://storage.googleapis.com/gloo-platform/helm-charts
-    targetRevision: 2.3.0
+    targetRevision: 2.4.6
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
   # ignore the self-signed certs that are being generated automatically    
-  ignoreDifferences:
-  - group: v1
-    kind: Secret
+  #ignoreDifferences:
+  #- group: v1
+  #  kind: Secret
