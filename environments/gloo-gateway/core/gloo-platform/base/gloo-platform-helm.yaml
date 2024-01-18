@@ -218,3 +218,6 @@ spec:
   ignoreDifferences:
   - group: core
     kind: Secret
+    name: relay-server-tls-secret
+    jsonPointers:
+       - /data
