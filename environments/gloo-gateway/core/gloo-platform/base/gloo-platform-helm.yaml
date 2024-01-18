@@ -217,28 +217,27 @@ spec:
   # ignore the self-signed certs that are being generated automatically    
   ignoreDifferences:
     - kind: Secret
-    #- kind: Secret
-    #  name: relay-identity-token-secret
-    #  namespace: gloo-mesh
-    #  jsonPointers:
-    #    - /data/token
-    #- kind: Secret
-    #  name: relay-root-tls-secret
-    #  namespace: gloo-mesh
-    #  jsonPointers:
-    #    - /data/ca.crt
-    #    - /data/tls.key
-    #- kind: Secret
-    #  name: relay-server-tls-secret
-    #  namespace: gloo-mesh
-    #  jsonPointers:
-    #    - /data/ca.crt
-    #    - /data/tls.key
-    #    - /data/tls.crt
-    #- kind: Secret
-    #  name: relay-tls-signing-secret
-    #  namespace: gloo-mesh
-    #  jsonPointers:
-    #    - /data/ca.crt
-    #    - /data/tls.key
-    #    - /data/tls.crt
+      name: relay-identity-token-secret
+      namespace: gloo-mesh
+      jsonPointers:
+        - /data/token
+    - kind: Secret
+      name: relay-root-tls-secret
+      namespace: gloo-mesh
+      jsonPointers:
+        - /data/ca.crt
+        - /data/tls.key
+    - kind: Secret
+      name: relay-server-tls-secret
+      namespace: gloo-mesh
+      jsonPointers:
+        - /data/ca.crt
+        - /data/tls.key
+        - /data/tls.crt
+    - kind: Secret
+      name: relay-tls-signing-secret
+      namespace: gloo-mesh
+      jsonPointers:
+        - /data/ca.crt
+        - /data/tls.key
+        - /data/tls.crt
