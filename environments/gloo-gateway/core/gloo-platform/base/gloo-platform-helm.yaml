@@ -49,9 +49,9 @@ spec:
             #    name: null
             #    namespace: null
             serviceType: LoadBalancer
-            extraEnvs:
-              EXPERIMENTAL_SECRET_FIELD_SELECTOR:
-                value: "metadata.namespace==gloo-mesh"
+            #extraEnvs:
+            #  EXPERIMENTAL_SECRET_FIELD_SELECTOR:
+            #    value: "metadata.namespace==gloo-mesh"
         glooUi:
             auth:
                 backend: oidc
@@ -213,11 +213,16 @@ spec:
     - RespectIgnoreDifferences=true
     automated:
       prune: true
-      selfHeal: false
+      selfHeal: true
   # ignore the self-signed certs that are being generated automatically    
   ignoreDifferences:
   - group: core
     kind: Secret
     name: relay-server-tls-secret
+    jsonPointers:
+       - /data
+  - group: core
+    kind: Secret
+    name: relay-root-tls-secret
     jsonPointers:
        - /data
