@@ -213,7 +213,8 @@ spec:
     - RespectIgnoreDifferences=true
     automated:
       prune: true
-      selfHeal: true
+      selfHeal: false
   # ignore the self-signed certs that are being generated automatically    
   ignoreDifferences:
-  - kind: Secret
+  - group: core
+    kind: Secret
