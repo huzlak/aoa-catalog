@@ -209,8 +209,8 @@ spec:
     repoURL: https://storage.googleapis.com/gloo-platform/helm-charts
     targetRevision: 2.4.7
   syncPolicy:
-    syncOptions:
-    - RespectIgnoreDifferences=true
+    #syncOptions:
+    #- RespectIgnoreDifferences=true
     automated:
       prune: true
       selfHeal: true
