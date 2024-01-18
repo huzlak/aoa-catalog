@@ -49,9 +49,9 @@ spec:
             #    name: null
             #    namespace: null
             serviceType: LoadBalancer
-            #extraEnvs:
-            #  EXPERIMENTAL_SECRET_FIELD_SELECTOR:
-            #    value: "metadata.namespace==gloo-mesh"
+            extraEnvs:
+              EXPERIMENTAL_SECRET_FIELD_SELECTOR:
+                value: "metadata.namespace==gloo-mesh"
         glooUi:
             auth:
                 backend: oidc
@@ -216,5 +216,4 @@ spec:
       selfHeal: true
   # ignore the self-signed certs that are being generated automatically    
   ignoreDifferences:
-  - group: v1
-    kind: Secret
+  - kind: Secret
